@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Game Logger</title>
+	
+	      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/site.css" media="screen,projection" />
+      <!--Import Droid Sans-->
+      <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      
+      
+
+</head>
+
+	<body>
+		<!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      
+        <!-- Modal1  welcome and settings Structure -->
+	  <div id="modal1" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">Welcome to Game Logger!</h4>
+	      <p class="blacktext">This site aims to help young gamers to manage how much time they play on their own. This is accomplished with parental support at first but soon hopefully it should lead to being managed entirely by the gamer themselves.</p>
+	      <p class="blacktext instructions">Please select a plan for how many hours a day the player will play.</p>
+	    </div>
+	    <div class="modal-footer">
+	      <a onclick="demoPlan()" class="modal-action modal-close waves-effect waves-green btn-flat">Demo</a>
+	      <a onclick="onehourPlan ()" class="modal-action modal-close waves-effect waves-green btn-flat">1 Hour</a>
+	      <a onclick="twohourPlan()" class="modal-action modal-close waves-effect waves-green btn-flat">2 Hours</a>
+	      <a onclick="threehourPlan()" class="modal-action modal-close waves-effect waves-green btn-flat">3 Hours</a>
+	    </div>
+	  </div>
+	          <!-- Modal7  intro to timer Structure -->
+	  <div id="modal7" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">Here is the timer!</h4>
+	      <div class="row">
+	      	<div class="col m6 s12"><img src="pics/timer.png" /></div><div class="col m6 s12"><div class="container"><p>This is the timer. When you begin to play a game click the start button. If you want to take a break click the stop button, and if you accidently started it click the reset button to reset it back to zero.</p></div> </div>
+	      </div>
+	    </div>
+	    <div class="modal-footer">
+	      <a onclick="nextModal()" class="modal-action modal-close waves-effect waves-green btn-flat">Cool!</a>
+	    </div>
+	  </div>
+	  	          <!-- Modal8  intro to profile Structure -->
+	  <div id="modal8" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">Here is your profile!</h4>
+	      <div class="row">
+	      	<div class="col m6 s12">
+	      		<div class="container">
+	      			<p>Here is your profile. This is where you can keep track of your gold coins, which are earned from getting done on time, as well as Productive Points which are rewarded for inputing times when you were doing something other than video games.</p>
+	      		</div>
+	      	</div>
+	      	<div class="col m6 s12">
+	      		<img src="pics/profile.png" /> 
+	      	</div>
+	      </div>
+	    </div>
+	    <div class="modal-footer">
+	      <a onclick="nextModal2()" class="modal-action modal-close waves-effect waves-green btn-flat">Cool!</a>
+	    </div>
+	  </div>
+	  	          <!-- Modal9  intro to log work -->
+	  <div id="modal9" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">Here is the work time logger!</h4>
+	      <div class="row">
+	      	<div class="col m6 s12">
+	      		<img src="pics/logwork.png" />
+	      	</div>
+	      	<div class="col m6 s12">
+	      		<div class="container">
+	      			<p>Select one of the four activities and then input how many hours and/or minutes you completed this task. The four activites are "Something Creative", "Homework or something to do with school work", "Chores", and "Exercise". If you did something you consider productive or beneficial to yourself or others, than feel free to pick one of the four you think is most closely alike that activity. </p>
+	      		</div> 
+	      	</div>
+	      </div>
+	    </div>
+	    <div class="modal-footer">
+	      <a onclick="nextModal3()" class="modal-action modal-close waves-effect waves-green btn-flat">Cool!</a>
+	    </div>
+	  </div>
+	  
+	  	          <!-- Modal10  intro to friends achivements -->
+	  <div id="modal10" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">Here is your friends activity!</h4>
+	      <div class="row">
+	      	<div class="col m6 s12">
+	      		<div class="container">
+	      			<p>This is where you can view some recent achievements of your friends. </p>
+	      		</div>
+	      	</div>
+	      	<div class="col m6 s12">
+	      		<img src="pics/friend.png" /> 
+	      	</div>
+	      </div>
+	    </div>
+	    <div class="modal-footer">
+	      <a onclick="nextModal4()" class="modal-action modal-close waves-effect waves-green btn-flat">Cool!</a>
+	    </div>
+	  </div>
+	
+	  	          <!-- Modal11  intro to recent achivements -->
+	  <div id="modal11" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">Here is your recent rewards!</h4>
+	      <div class="row">
+	      	<div class="col m12 s12">
+	      		<div class="container">
+	      			<p>This is where you can view some of your own recent rewards for using Game Logger </p>
+	      		</div>
+	      	</div>
+	      	<div class="col m12 s12 ">
+	      		<img class="autowidth" src="pics/rewards.png" /> 
+	      	</div>
+	      </div>
+	    </div>
+	    <div class="modal-footer">
+	      <a  class="modal-action modal-close waves-effect waves-green btn-flat">Cool!</a>
+	    </div>
+	  </div>
+	  
+	  
+	  
+	  
+	  
+	          <!-- Modal2  alert Structure -->
+	  <div id="modal2" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">Time to take a break!</h4>
+	      <p class="blacktext">Take a 10 minute break to get up out of your seat and move around a bit. Walk around a bit, run in place, or do a few pushups.</p>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">All done!</a>
+	    </div>
+	  </div>
+	          <!-- Modal3  alert and insert coin Structure -->
+	  <div id="modal3" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">Are you done?</h4>
+	      <p class="blacktext">If you are not done you will need to pay 1 gold coin to play for every 5 minutes</p>
+	    </div>
+	    <div class="modal-footer">
+	      <a id="alldone" class="modal-action modal-close waves-effect waves-green btn-flat">All done!</a><a id="insertcoin" class="modal-action modal-close waves-effect waves-green btn-flat">Insert Coin!</a>
+	    </div>
+	  </div>
+	  	          <!-- Modal4  all done Structure -->
+	  <div id="modal4" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">All Done!</h4>
+	      <p class="blacktext">Congrats! as a reward for finishing on time you have been rewarded with 1 gold coin!</p>
+	    </div>
+	    <div class="modal-footer">
+	      <a id="freecoin" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Awesome!</a>
+	    </div>
+	  </div>
+	  	  	          <!-- Modal5  last ask for extension Structure -->
+	  <div id="modal5" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">Are you done?</h4>
+	      <p class="blacktext">If you are not done you will need to pay 1 gold coin to play for another 5 minutes</p>
+	    </div>
+	    <div class="modal-footer">
+	      <a onclick="alldone()" class="modal-action modal-close waves-effect waves-green btn-flat">All done!</a><a id="insertcoin" class="modal-action modal-close waves-effect waves-green btn-flat">Insert Coin!</a>
+	    </div>
+	  </div>
+	  	  	          <!-- Modal6  finsh using Structure -->
+	  <div id="modal6" class="modal">
+	    <div class="modal-content">
+	      <h4 class="blacktext">All Done!</h4>
+	      <p class="blacktext">Thanks for using Game Logger today. You have spent all of the coins you are allowed to spend today. Make sure to log in tomarrow if you are going to play more video games.</p>
+	    </div>
+	    <div class="modal-footer">
+	      <a  class="modal-action modal-close waves-effect waves-green btn-flat">Awesome!</a>
+	    </div>
+	  </div>
+      
+      <div class="container z-depth-4">
+      	<div class="row border">
+      		<!--timer, profile-->
+      		<div class="col s12 m6">
+      			<!--<p>Game Logger</p>-->
+      			<h1 class="center-text timer" id="timer">00:00:00</h1>
+      			<div class="center">
+      				<h2 id="start" class="timer-button waves-effect waves-light btn">Start</h2>
+      				<br />
+      				<h2 id="stop" class="timer-button waves-effect waves-light btn">Stop</h2>
+      				<br />
+      				<h2 id="reset" class="timer-button waves-effect waves-light btn">Reset</h2>
+      			</div>
+      			
+
+      		</div>
+      		<div class="col s12 m6">
+      			 <div class="row">
+      				<p class="col s6">Coin:</p><p id="gold" class="col s6">5 Gold</p>
+      				<img id="usernamephoto" class="col s5" alt="Profile Pic" />
+      				<p id="username" class="col s7">Robotboy1015</p>
+      				<p id="PP" class="col s12">45 PP</p>
+      			</div>
+      			
+      		</div>
+      	</div>
+      	<div class="row border">
+      		<!--Log worktime, friends activity-->
+      		<div class="col m6 s12">
+      			 <div class=" row ">
+      			 	<p class="col s12">Log Work Time</p>
+      			 	<div class="center-align">
+      			 	<!--	      				
+      				<i class="small material-icons">brush</i>
+      				-->
+      		  <form class="col s12 m6" action="#">
+			    <p>
+			      <input name="group1" type="radio" id="test1" value="1" />
+			      <label for="test1" title="Creative Work"><i class="small material-icons">brush</i></label>
+			    </p>
+			    <p>
+			      <input name="group1" type="radio" id="test2" value="2" />
+			      <label for="test2" title="Homework"><i class="small material-icons">book</i></label>
+			    </p>
+			    <p>
+			      <input  name="group1" type="radio" id="test3" value="3"   />
+			      <label for="test3" title="Chores"><i class="small material-icons">work</i></label>
+			    </p>
+			    <p>
+			      <input name="group1" type="radio" id="test4" value="4"  />
+			      <label for="test4" title="Exercise"><i class="small material-icons">fitness_center</i></label>
+			    </p>
+			  </form>
+      					<div class="col m6"><p>Enter how long you were productive</p></div>
+      					<div class="input-field inline time_box col m3">
+            				<input   id="htime" type="text" class="validate" title="Enter how many hours you were productive">
+            				<label for="htime" title="Exercise" class="input">Hours</label>
+          				</div>
+          				<div class="input-field inline time_box col m3">
+            				<input   id="mtime" type="text" class="validate" title="Enter how many minutes you were productive">
+            				<label for="mtime" title="Exercise" class="input">Minutes</label>
+          				</div>
+          				 <button class="btn waves-effect waves-light" type="submit" name="action" id="submitP"  >Submit
+    						<i class="material-icons right">send</i>
+  						</button>
+  						
+      			 	</div>
+
+      				
+      			</div>
+      			
+      		</div>
+      		<div class="col s12 m6">
+
+      			<div class="row">
+      				<p class="col s12">Friend Activity</p>
+      				<div class="col s6 m3"><img class="friend_award" src="pics/joystickblue.png" alt="Friend Achievement"/><p class="center-align friend_name">coolbro03 achieved</p><p class="achievement">7 days without spending any gold!</p></div>
+      				<div class="col s6 m3"><img class="friend_award" src="pics/joystickbronze.png" alt="Friend Achievement"/><p class="center-align friend_name">sammybobo13 achieved</p><p class="achievement">Hoard 300 Productive Points</p></div>
+      				<div class="col s6 m3"><img class="friend_award" src="pics/joystickgold.png" alt="Friend Achievement"/><p class="center-align friend_name">mikenike achieved</p><p class="achievement">Hoard 1000 Productive Points</p></div>
+      				<div class="col s6 m3"><img class="friend_award" src="pics/joystickred.png" alt="Friend Achievement"/><p class="center-align friend_name">drioddude1510 achieved</p><p class="achievement">7 Daily Login bonuses</p></div>
+      			</div>
+      		
+      		</div>
+      	</div>
+      	<div class="row border">
+			<!--Recent Rewards-->
+      	    <div class="col m12 s12 ">
+      			<p class="recentrewards">Recent Rewards</p>
+      			<div class="carousel">
+      				
+      				<div class="carousel-item"><img class="friend_award" src="pics/joystickred.png" alt="Recent Achievement"/><p class="achievement">7 Daily Login bonuses</p></div>
+      				<div class="carousel-item"><img class="friend_award" src="pics/joysticksilver.png" alt="Recent Achievement"/><p class="achievement">Hoard 600 Productive Points</p></div>
+      				<div class="carousel-item"><img class="friend_award" src="pics/joystickbronze.png" alt="Recent Achievement"/><p class="achievement">Hoard 300 Productive Points</p></div>
+      				<div class="carousel-item"><img class="friend_award" src="pics/joystickgreen.png" alt="Recent Achievement"/><p class="achievement">Create an account</p></div>
+      				<div class="carousel-item"><img class="friend_award" src="pics/joystickblue.png" alt="Recent Achievement"/><p class="achievement">7 days without spending any gold!</p></div>
+      					
+      			
+      			</div>
+      			
+      		</div>
+      	</div>
+      	
+      	
+ 
+		
+
+			
+			
+      </div>
+		
+
+	      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/site.js"></script>
+	</body>
+	    
+</html>

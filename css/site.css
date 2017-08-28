@@ -1,0 +1,69 @@
+.pink-background {
+	background-color: #f442c5;
+}
+.border {
+	/*border:  2px solid #004f3a;*/
+	margin-bottom: 0;
+}
+.container{
+	background-color: #004f3a;
+	padding: 1em;
+}
+.center-text {
+	text-align:center;
+}
+.timer-button {
+	margin-top: .7em;
+	margin-bottom: .7em;
+
+}
+.timer {
+	margin-bottom: 10px;
+}
+.time_box {
+	margin-top: 0px;
+}
+.friend_award {
+	height: auto;
+	width:100%;
+	
+}
+.friend_name{
+	font-size:1em;
+	text-align: center;
+}
+.achievement{
+	font-size:0.8em;
+	text-align: center;
+}
+.recent_award {
+	height: auto;
+	width:100%;
+	
+}
+.input {
+	padding-top:6%;
+	padding-bottom:6%;
+}
+.blacktext{
+	color:#252525;
+}
+.instructions {
+	font-size: 1.25em;
+	font-weight:800;
+}
+.recentrewards{
+	margin-bottom:-1em;
+}
+.autowidth{
+	width:100%;
+}
+p {
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 20px;
+	color:white;
+}
+body {
+	background-color: #005e51;
+	color:white;
+}
